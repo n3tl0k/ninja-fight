@@ -11,12 +11,12 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.x]
+        node-version: [8.x]
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v1
       - name: install node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
       - name: install makecode
@@ -53,9 +53,11 @@ jobs:
         run: |
           cat binary-*.uf2 > built/arcade.uf2
       - name: upload bundled
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-release-asset@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          path: ./built/arcade.uf2
-          name: arcade.uf2
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./built/arcade.uf2
+          asset_name: arcade.uf2
+          asset_content_type: application/octet-stream
