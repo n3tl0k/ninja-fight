@@ -1,6 +1,9 @@
 namespace SpriteKind {
     export const dort = SpriteKind.create()
 }
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, location) {
+    info.changeLifeBy(-1)
+})
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     mySprite3,
@@ -703,6 +706,7 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     )
 })
 let myDart: Dart = null
+let ggg: Sprite = null
 let mySprite3: Sprite = null
 mySprite3 = sprites.create(img`
     ....................
@@ -862,3 +866,24 @@ scene.setBackgroundImage(img`
     `)
 tiles.setCurrentTilemap(tilemap`level2`)
 info.setLife(5)
+for (let value of tiles.getTilesByType(assets.tile`myTile0`)) {
+    ggg = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . 7 7 . . . . 
+        . . . . . . 7 7 7 7 7 7 . . . . 
+        . . . . 7 7 7 7 7 7 7 7 . . . . 
+        . . . . 1 f 7 7 7 7 7 f 1 . . . 
+        . . . 7 7 7 7 7 7 7 7 7 7 7 7 . 
+        . . 7 7 7 7 . 7 . 7 7 7 7 7 7 . 
+        . . 7 7 7 . 7 . . . 7 7 7 7 7 . 
+        7 7 7 7 7 7 . . . . . 7 7 7 7 . 
+        7 7 7 7 7 7 7 7 . 7 7 7 7 7 7 . 
+        7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
+        `, SpriteKind.Enemy)
+    tiles.placeOnTile(ggg, value)
+}
