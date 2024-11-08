@@ -53,11 +53,9 @@ jobs:
         run: |
           cat binary-*.uf2 > built/arcade.uf2
       - name: upload bundled
-        uses: Shopify/upload-to-release@v2.0.0
+        uses: actions/upload-artifact@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           path: ./built/arcade.uf2
           name: arcade.uf2
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          content-type: application/octet-stream
