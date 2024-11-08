@@ -1,20 +1,26 @@
 {
-    "name": "ninja fight!",
+    "name": "ninja go!",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "animation": "*",
+        "darts": "*",
+        "pxt-status-bar": "github:jwunderl/pxt-status-bar#v0.4.2",
+        "multiplayer": "*"
     },
     "files": [
         "main.blocks",
         "main.ts",
         "README.md",
-        "assets.json"
+        "assets.json",
+        "tilemap.g.jres",
+        "tilemap.g.ts"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "target": "1.12.56",
+        "target": "1.12.57",
         "targetId": "arcade"
     },
     "supportedTargets": [
