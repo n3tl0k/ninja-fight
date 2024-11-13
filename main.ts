@@ -15,6 +15,9 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
     mySprite3,
     [img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
         . 1 1 . . . 1 1 1 . . . 1 1 . . 
         1 1 . . . . 1 1 1 . . . . 1 1 . 
         1 . . . . 1 1 1 1 1 . . . . 1 . 
@@ -28,24 +31,21 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
         `,img`
-        . 1 1 . . . . . . . 1 1 . . . . 
-        1 1 . . . . . . . . . 1 1 . . . 
-        1 . . 1 1 . . . 1 1 . . 1 . . . 
-        . . . 1 1 1 1 1 1 1 . . . . . . 
-        . . . . 1 1 2 1 1 . . . . . . . 
-        . . . . 1 2 5 2 1 . . . . . . . 
-        . . . . 1 1 2 1 1 . . . . . . . 
-        . . . 1 1 1 1 1 1 1 . . . . . . 
-        . . . 1 1 . . . 1 1 . . . . . . 
-        . 1 . . . . . . . . . . 1 . . . 
-        . 1 1 . . . . . . . . 1 1 . . . 
-        . . 1 1 . . . . . . 1 1 . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
+        . . 1 1 . . . . . . . 1 1 . . . 
+        . 1 1 . . . . . . . . . 1 1 . . 
+        . 1 . . 1 1 . . . 1 1 . . 1 . . 
+        . . . . 1 1 1 1 1 1 1 . . . . . 
+        . . . . . 1 1 2 1 1 . . . . . . 
+        . . . . . 1 2 5 2 1 . . . . . . 
+        . . . . . 1 1 2 1 1 . . . . . . 
+        . . . . 1 1 1 1 1 1 1 . . . . . 
+        . . . . 1 1 . . . 1 1 . . . . . 
+        . . 1 . . . . . . . . . . 1 . . 
+        . . 1 1 . . . . . . . . 1 1 . . 
+        . . . 1 1 . . . . . . 1 1 . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `],
@@ -569,7 +569,7 @@ scene.setBackgroundImage(img`
     cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
     `)
 tiles.setCurrentTilemap(tilemap`level2`)
-mySprite3.vy = 350
+mySprite3.ay = 350
 mySprite3.setPosition(15, 90)
 mySprite3.setStayInScreen(true)
 info.setLife(5)
