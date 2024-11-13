@@ -6,7 +6,9 @@
         "animation": "*",
         "darts": "*",
         "pxt-status-bar": "github:jwunderl/pxt-status-bar#v0.4.2",
-        "multiplayer": "*"
+        "multiplayer": "*",
+        "color-coded-tilemap": "*",
+        "arcade-background-scroll": "github:microsoft/arcade-background-scroll#v0.1.2"
     },
     "files": [
         "main.blocks",
